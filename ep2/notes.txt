@@ -1,0 +1,4 @@
+run npm init in your project to add node as your package manager, it will ask multiple ques such as pkg name etc
+once npm is initialised, we will add bundler to the app- this will compress n bundle all our files together into a package eg webpack, veet, parcel
+using parcel for now, install it using, npm i -D parcel (-D to specify this is dev dependency )
+dependencies- dev dependency(reqd only in dev phase) and normal(used in prod)

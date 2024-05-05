@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <title>Namaste React</title>
+</head>
+
+<body>
+    <!-- inject html elements using plain html -->
+    <div id="root">
+        <h1>Hello World!</h1>
+    </div>
+    <div id="root2"></div>
+    <div id="root3"></div>
+    <h3> React will only replace or work in the respective div which is used at root, will not affect the elements above/below it</h3>
+    <div id="root4"></div>
+
+    <!-- inject html elements using javascript -->
+    <script>
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Hello World by Javascript!";
+        const root = document.getElementById('root')
+        root.appendChild(heading);
+    </script>
+
+    <!-- inject html elements using react -->
+    <!-- order of these files matter as we can use react after it has been injected -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
