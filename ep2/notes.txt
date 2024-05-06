@@ -2,3 +2,30 @@ run npm init in your project to add node as your package manager, it will ask mu
 once npm is initialised, we will add bundler to the app- this will compress n bundle all our files together into a package eg webpack, veet, parcel
 using parcel for now, install it using, npm i -D parcel (-D to specify this is dev dependency )
 dependencies- dev dependency(reqd only in dev phase) and normal(used in prod)
+
+package version eg - ^2.8.0 (caret) - in case of minor upgrade, it will automatically upgrade
+~2.8.3 (tilde) - it will upgrade major versions eg upgrade to 3.2.0
+
+package.json- configuration for npm, keeps approx versions
+package-lock.json- keeps track of exact version being installed, also has a sha (hash) which is used to compare if we have the sme local version as the production
+transitive dependencies- one pkg can have its own dependencies and each dependency can ufrther have its own dependencies
+
+-npx parcel index.html - npx is used to execute a package, 
+will  bundle n create dist, 
+host the app on local server,
+ HMR- Hot module replacement - refreshes pages when changes are made, 
+ uses File watching algorithm-written in C++, 
+ faster builds due to caching mechanism
+ image optimization
+ minification for prod builds (bundles)
+ compress the files(remove unwanted/white lines)
+ consistent hashing
+ code splitting
+ differential bundling- app can be opened in various browsers/versions, parcel supports that- different bundle for diff browsers
+ diagnostics
+ error handling
+ can also host on https
+ tree shaking algorithm - removes unused code
+ diff dev n prod bundles
+
+ for prod build- npx parcel build index.html ---- this will give error so remember to remove  "main": "index.js", from package.json
